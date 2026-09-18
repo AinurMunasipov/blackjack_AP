@@ -1,10 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="24dp"
     tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/playerNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugador"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/dealerCardsText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Crupier: ? ?"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/playerNameText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/dealerPointsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Puntos del crupier: ?"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/dealerCardsText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/playerCardsText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Tus cartas:"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/dealerPointsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/playerPointsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Puntos: 0"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/playerCardsText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/hitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Pedir carta"
+        app:layout_constraintTop_toBottomOf="@id/playerPointsText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/standButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plantarse"
+        app:layout_constraintTop_toTopOf="@id/hitButton"
+        app:layout_constraintStart_toEndOf="@id/hitButton"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
