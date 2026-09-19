@@ -6,77 +6,150 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
+    android:background="@drawable/table_background"
+    android:padding="20dp"
     tools:context=".GameActivity">
 
     <TextView
-        android:id="@+id/playerNameText"
+        android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jugador"
-        android:textSize="24sp"
+        android:text="BLACKJACK"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/dealerCardsText"
-        android:layout_width="0dp"
+        android:id="@+id/dealerLabel"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Crupier: ? ?"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/playerNameText"
+        android:layout_marginTop="18dp"
+        android:text="Crupier"
+        android:textColor="#FFFFFF"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+    <LinearLayout
+        android:id="@+id/dealerPrimaryRow"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dealerLabel" />
+
+    <LinearLayout
+        android:id="@+id/dealerReserveRow"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dealerPrimaryRow" />
 
     <TextView
         android:id="@+id/dealerPointsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="Puntos del crupier: ?"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/dealerCardsText"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/playerCardsText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Tus cartas:"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/dealerPointsText"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/dealerReserveRow" />
 
     <TextView
         android:id="@+id/playerPointsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Puntos: 0"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/playerCardsText"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="8dp"
+        android:text="Puntos del jugador: 0"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dealerPointsText" />
 
-    <Button
-        android:id="@+id/hitButton"
+    <LinearLayout
+        android:id="@+id/playerPrimaryRow"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerPointsText" />
+
+    <LinearLayout
+        android:id="@+id/playerReserveRow"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerPrimaryRow" />
+
+    <TextView
+        android:id="@+id/playerNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Pedir carta"
-        app:layout_constraintTop_toBottomOf="@id/playerPointsText"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="8dp"
+        android:text="Jugador"
+        android:textColor="#FFFFFF"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerReserveRow" />
 
-    <Button
-        android:id="@+id/standButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/buttonsRow"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Plantarse"
-        app:layout_constraintTop_toTopOf="@id/hitButton"
-        app:layout_constraintStart_toEndOf="@id/hitButton"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/hitButton"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#D97706"
+            android:text="Pedir carta"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/standButton"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#D97706"
+            android:text="Plantarse"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
