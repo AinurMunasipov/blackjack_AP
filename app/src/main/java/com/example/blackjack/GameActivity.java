@@ -53,10 +53,12 @@ public class GameActivity extends AppCompatActivity {
                             WindowInsetsCompat.Type.systemBars()
                     );
 
+                    int sidePadding = dpToPx(20);
+
                     v.setPadding(
-                            systemBars.left,
+                            systemBars.left + sidePadding,
                             systemBars.top,
-                            systemBars.right,
+                            systemBars.right + sidePadding,
                             systemBars.bottom
                     );
 
