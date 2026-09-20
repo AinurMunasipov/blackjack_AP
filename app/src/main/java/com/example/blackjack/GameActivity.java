@@ -93,6 +93,20 @@ public class GameActivity extends AppCompatActivity {
 
         updateScreen(false);
 
+        if (game.getPlayerPoints() == 21) {
+
+            game.dealerTurn();
+            updateScreen(true);
+
+            hitButton.setEnabled(false);
+            standButton.setEnabled(false);
+
+            hitButton.postDelayed(
+                    this::finishGame,
+                    2000
+            );
+        }
+
         hitButton.setOnClickListener(v -> {
 
             game.playerHit();
@@ -107,7 +121,20 @@ public class GameActivity extends AppCompatActivity {
 
                 hitButton.postDelayed(
                         this::finishGame,
-                        1000
+                        2000
+                );
+
+            } else if (game.getPlayerPoints() == 21) {
+
+                game.dealerTurn();
+                updateScreen(true);
+
+                hitButton.setEnabled(false);
+                standButton.setEnabled(false);
+
+                hitButton.postDelayed(
+                        this::finishGame,
+                        2000
                 );
             }
         });
@@ -122,7 +149,7 @@ public class GameActivity extends AppCompatActivity {
 
             standButton.postDelayed(
                     this::finishGame,
-                    1000
+                    2000
             );
         });
     }
