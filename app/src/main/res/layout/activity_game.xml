@@ -29,7 +29,7 @@
         android:layout_marginTop="18dp"
         android:text="Crupier"
         android:textColor="#FFFFFF"
-        android:textSize="21sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,10 +64,22 @@
         android:layout_marginTop="8dp"
         android:text="Puntos del crupier: ?"
         android:textColor="#FFFFFF"
-        android:textSize="17sp"
+        android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dealerReserveRow" />
+
+    <View
+        android:id="@+id/pointsDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:background="#66FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dealerPointsText" />
 
     <TextView
         android:id="@+id/playerPointsText"
@@ -76,10 +88,10 @@
         android:layout_marginTop="8dp"
         android:text="Puntos del jugador: 0"
         android:textColor="#FFFFFF"
-        android:textSize="17sp"
+        android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dealerPointsText" />
+        app:layout_constraintTop_toBottomOf="@id/pointsDivider" />
 
     <LinearLayout
         android:id="@+id/playerPrimaryRow"
@@ -110,7 +122,7 @@
         android:layout_marginTop="8dp"
         android:text="Jugador"
         android:textColor="#FFFFFF"
-        android:textSize="21sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -137,6 +149,7 @@
             android:backgroundTint="#D97706"
             android:text="Pedir carta"
             android:textColor="#FFFFFF"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
         <Button
@@ -148,6 +161,7 @@
             android:backgroundTint="#D97706"
             android:text="Plantarse"
             android:textColor="#FFFFFF"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
     </LinearLayout>
